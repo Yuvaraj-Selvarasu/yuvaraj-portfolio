@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuva - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="dark-theme">
+    <header class="header" data-header>
+        <div class="container">
+            <h1 class="h1 logo">
+                <a href="#">Yuva<span>.</span></a>
+            </h1>
+
+            <div class="navbar-actions">
+                <select name="language" id="lang">
+                    <option value="en">En</option>
+                    <option value="es">Tn</option>
+                </select>
+
+                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn><span
+                        class="icon"></span></button>
+            </div>
+
+            <button class="nav-toggle-btn " aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="#home" class="navbar-link">Home</a></li>
+                    <li><a href="#about" class="navbar-link">About</a></li>
+                    <li><a href="#skills" class="navbar-link">Skills</a></li>
+                    <li><a href="#portfolio" class="navbar-link">Project</a></li>
+                    <li><a href="#education" class="navbar-link">Education</a></li>
+                    <li><a href="#contact" class="navbar-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+            <section class="hero" id="home">
+                <figure class="hero-banner">
+                    <picture>
+                        <source srcset="image/pro-yuva.png" media="(min-width: 768px)">
+                        <source srcset="image/pro-yuva.png" media="(min-width: 500px)">
+                        <img src="image/pro-yuva.png" alt="A man with blue shirt" class="w-100">
+                    </picture>
+                </figure>
+
+                <div class="hero-content">
+                    <h2 class="h2 hero-title">Hi, I’m <span class="nameText">Yuvaraj</span>, a Web Designer and
+                        Developer</h2>
+                    <div class="contactWapper">
+                        <a href="#contact" class="btn btn-primary">Contact us</a>
+                        <button class="downBtn" onclick="downloadPDF(this)">
+                            <span class="downloadText">Download CV</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <ul class="hero-social-list">
+                    <li>
+                        <a href="#" class="hero-social-link">
+                            <i class="ri-facebook-fill"></i>
+                            <div class="tooltip">Facebook</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.naukri.com/mnjuser/profile" class="hero-social-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="tooltip"> Nakuri</div>
+                            <i class="ri-briefcase-fill"></i>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/yuvarajselvarasu" class="hero-social-link" target="_blank">
+                            <i class="ri-linkedin-fill"></i>
+                            <div class="tooltip">Linkedin</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#stats" class="scroll-down">Scroll</a>
+            </section>
+
+            <section class="stats" id="stats">
+                <ul class="stats-list">
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img src="https://i.postimg.cc/x1TWtf69/stats-card-icon-1.png" alt="badge icon">
+                            </div>
+
+                            <h2 class="h2 card-title">2+<strong>Years of Experience</strong></h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img src="https://i.postimg.cc/q7ByNYBb/stats-card-icon-2.png" alt="checkmark icon">
+                            </div>
+
+                            <h2 class="h2 card-title">05+<strong>Completed Projects</strong></h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="stats-card">
+                            <div class="card-icon">
+                                <img src="https://i.postimg.cc/hj6d3tL6/stats-card-icon-3.png"
+                                    alt="peoples rating icon">
+                            </div>
+
+                            <h2 class="h2 card-title">02+<strong>Happy Clients</strong></h2>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="about" id="about">
+                <figure class="about-banner">
+                    <img src="image/yuva-about.png" alt="A man thinking" class="w-100">
+                </figure>
+
+                <div class="about-content section-content">
+                    <p class="section-subtitle">About me</p>
+                    <h2 class="h2 section-title">From Concept to Cloud!</h2>
+                    <p class="section-text">I’m a Front-End Developer passionate about crafting modern, responsive, and
+                        high-performance web experiences. My focus is on creating clean, intuitive interfaces that blend
+                        design, animation, and functionality.
+
+                        Along with front-end technologies like React, SCSS, and GSAP, I’m expanding my expertise into
+                        cloud and DevOps concepts — learning AWS, Jenkins, Docker, Prometheus, and Grafana to better
+                        understand deployment pipelines, monitoring, and scalability.
+
+                        I believe great development is not just about code — it’s about creating seamless, reliable, and
+                        visually engaging experiences that connect design and technology.</p>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-secondary">Hire me</button>
+                </div>
+            </section>
+
+            <section class="skills" id="skills">
+                <div class="skills-content section-content">
+                    <p class="section-subtitle">My Skills</p>
+                    <h2 class="h2 section-title">My Technical Expertise!</h2>
+                    <p class="section-text">I develop simple, intuitive and responsive user interface that helps user
+                        get things done with less effort and time with those technologies</p>
+
+                    <div class="skills-toggle" data-toggle-box>
+                        <button class="toggle-btn active" data-toggle-btn>Skills</button>
+                        <button class="toggle-btn" data-toggle-btn>Tools</button>
+                    </div>
+                </div>
+
+                <div class="skills-box " data-skills-box>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">HTML5</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/90cYBMc2/html5.png"
+                                        alt="HTML5 logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">CSS3</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/cCDwMBD7/css3.png"
+                                        alt="CSS3 logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Javascript</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/htmQfnq1/javascript.png"
+                                        alt="Javascript logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">SASS</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/jSrKsYqf/sass.png"
+                                        alt="SASS logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Bootstrap</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/Fzf3pJw2/bootstrap.png"
+                                        alt="Bootstrap logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">React</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/LsNPMTpc/react.png"
+                                        alt="React logo"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">AWS</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/aws.png"
+                                        alt="JQuery logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Prometheus</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/prometheus.png"
+                                        alt="TypeScript logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Grafana</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/grafana.png"
+                                        alt="Angular logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Jenkins</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/jenkins.png"
+                                        alt="Vue logo">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">CI/CD</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/ci_cd.png"
+                                        alt="Firebase logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Docker</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/docker.png"
+                                        alt="PugJs logo"></div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                    <ul class="tools-list">
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">VS Code</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/zvXqW9PB/vs-code.png"
+                                        alt="VS Code logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Bitbucket</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/bitbucket.png"
+                                        alt="Ajax logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Jira</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/jira.png"
+                                        alt="Gulp logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Figma</div>
+                                <div class="card-icon"><img
+                                        src="https://cdn.jsdelivr.net/gh/marwin1991/profile-technology-icons/icons/figma.png"
+                                        alt="Webpack logo"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Git</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/Gp5FZCv0/git.png" alt="Git logo">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Npm</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/wjxDMvV8/npm.png" alt="Npm logo">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Command Line</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/VNrr0b0T/command.png"
+                                        alt="Command Line logo"></div>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="skills-card">
+                                <div class="tooltip">Slack</div>
+                                <div class="card-icon"><img src="https://i.postimg.cc/3RfcSVxW/slack.png"
+                                        alt="Slack logo"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project" id="portfolio">
+                <div>
+                    <div class="project-content section-content">
+                        <p class="section-subtitle">My Projects</p>
+                        <h2 class="h3 section-title">Dive into my works that blend creativity and technology</h2>
+                        <p class="section-text">We build high-quality, scalable websites designed to serve you for
+                            the long term. Our clean, elegant, and intuitive interfaces make managing your site
+                            effortless — even without technical skills</p>
+                    </div>
+                </div>
+                <div class="box-wrapper">
+                    <figure class="shape-box shape-box_half">
+                        <img src="image/winclshlogo.png" alt="winclashLogo">
+                        <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">01</h3>
+                                <h4 class="card-main-title">Winclash</h4>
+                            </div>
+                            <p class="card-content">Winclash is an online gaming platform designed with a focus on
+                                responsiveness, interactivity, and engaging visuals. It allows users to explore
+                                contests,
+                                view scores, and enjoy a seamless gaming experience through smooth UI transitions.<br>
+                                <span class="carfText">HTML, CSS, JAVASCRIPT</span>
+                            </p>
+                            </p>
+                            <a href="https://winclash.com/" class="read-more-btn" target="_blank">Live Link</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                    <figure class="shape-box shape-box_half">
+                        <img src="image/playkaroLogo.png">
+                        <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">02</h3>
+                                <h4 class="card-main-title">Play Karo</h4>
+                            </div>
+                            <p class="card-content">Playkaro is an interactive web-based gaming platform that offers
+                                users a
+                                smooth and engaging experience. The interface is built with a focus on modern design,
+                                responsiveness, and dynamic gameplay interactions. <br> <span class="carfText">HTML,
+                                    CSS,
+                                    JAVASCRIPT</span></p>
+                            <a href="https://playkaro365.com/" class="read-more-btn" target="_blank">Live Link</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                    <figure class="shape-box shape-box_half">
+                        <img src="image/affiLogo.png">
+                        <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">03</h3>
+                                <h4 class="card-main-title">Affiliate</h4>
+                            </div>
+                            <p class="card-content">JeetMatch Affiliate is a web platform designed to promote gaming and
+                                affiliate marketing programs. It provides users with intuitive navigation, promotional
+                                content, and real-time engagement features to enhance conversion rates.<br> <span
+                                    class="carfText">HTML, SCSS, JAVASCRIPT</span></p>
+                            <a href="https://hbm-st.testingserver2.com/" class="read-more-btn" target="_blank">Live
+                                Link</a>
+                        </figcaption>
+
+                        <span class="after"></span>
+                    </figure>
+                    <figure class="shape-box shape-box_half">
+                        <img src="image/zraiLogo.png">
+                        <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">04</h3>
+                                <h4 class="card-main-title">Zrai</h4>
+                            </div>
+                            <p class="card-content">ZRAI is an AI-powered business platform designed to streamline
+                                workflow
+                                automation and enhance team productivity. It features a modern, responsive interface
+                                with
+                                interactive dashboards and real-time data insights.<br> <span class="carfText">HTML,
+                                    CSS,
+                                    JavaScript, React.js, SCSS</span></p>
+                            <a href="https://development.dashboard.zrika.com/dashboard" class="read-more-btn"
+                                target="_blank">Live Link</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="educationContainer" id="education">
+                <div class="project-content section-content">
+                    <p class="section-subtitle">My Education</p>
+                    <h2 class="h3 section-title">Academic Milestones</h2>
+                    <p class="section-text">I hold a degree in Computer Science, where I built a strong foundation
+                        in programming, system design, and web technologies. My education has been instrumental in
+                        shaping the analytical mindset and problem-solving skills I apply to every project
+                    </p>
+                </div>
+                <ul class="timeline">
+                    <!-- Item 1 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">BCA</span>
+                                <span class="time-wrapper"><span class="time">Under Graduate - 2022</span></span>
+                            </div>
+                            <div class="desc">Shanmuga Industries Arts and Science College,
+                                Thiruvalluvar University —Bachelor of Computer
+                                Applications (BCA)
+                                2017-2020</div>
+                        </div>
+                    </li>
+
+                    <!-- Item 2 -->
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">MCA</span>
+                                <span class="time-wrapper"><span class="time">Post Graduate - 2022</span></span>
+                            </div>
+                            <div class="desc">Sri Venkateswara College of Engineering and
+                                Technology, Anna University — Master of Computer
+                                Applications (MCA)
+                                2020-2022</div>
+                        </div>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Cloud Computing</span>
+                                <span class="time-wrapper"><span class="time">Certification - 2023</span></span>
+                            </div>
+                            <div class="desc">Besant Technology Training Center - Cloud
+                                Computing Course - Linux, Amazon Web Service &
+                                DevOps
+                                2023-2024</div>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="contact-content section-content">
+                    <p class="section-subtitle">Contact</p>
+                    <h2 class="h3 section-title">Have a project in mind? Let’s build it together!</h2>
+                    <p class="section-text">Have a project or idea in mind? Get in touch and let me know how I can help.
+                        Fill out the form, and I’ll get back to you as soon as possible.</p>
+                    <ul class="contact-list">
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Address: </h3>
+                                <address class="contact-info">
+                                    Tiruvannamalai, TamilNadu, India -604406.
+                                </address>
+                            </div>
+                        </li>
+
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Phone: </h3>
+
+                                <a href="9080685837" class="contact-info">(+91) 9080685837</a>
+                            </div>
+                        </li>
+
+                        <li class="contact-list-item">
+                            <div class="contact-item-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Email: </h3>
+
+                                <a href="mailto:yuvarajselvi27@gamil.com"
+                                    class="contact-info">yuvarajselvi27@gamil.com</a>
+                                <a href="mailto:support@yuva.com" class="contact-info">support@yuva.com</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <ul class="contact-social-list">
+                                <li>
+                                    <a href="#" class="contact-social-link">
+                                        <div class="tooltip">Facebook</div>
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="contact-social-link">
+                                        <div class="tooltip">X-Twitter</div>
+                                        <i class="ri-twitter-x-line"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.linkedin.com/in/yuvarajselvarasu" class="contact-social-link"
+                                        target="_blank">
+                                        <div class="tooltip">Linkedin</div>
+                                        <i class="ri-linkedin-fill"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.naukri.com/mnjuser/profile" class="contact-social-link"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <div class="tooltip"> Nakuri</div>
+                                        <i class="ri-briefcase-fill"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="" class="contact-form">
+                    <div class="form-wrapper">
+                        <label for="name" class="form-label">Name</label>
+
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="name" required placeholder="yuvaraj selvarasu"
+                                class="input-field">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="email" class="form-label">Email</label>
+
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="email" required placeholder="yuvarajselvi27@gmail.com"
+                                class="input-field">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="phone" class="form-label">Phone</label>
+
+                        <div class="input-wrapper">
+                            <input type="tel" name="phone" id="phone" required placeholder="Phone Number"
+                                class="input-field">
+                            <ion-icon name="call"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper">
+                        <label for="message" class="form-label">Message</label>
+
+                        <div class="input-wrapper">
+                            <textarea name="message" id="message" class="input-field" required
+                                placeholder="Write your Message"></textarea>
+                            <ion-icon name="chatbubbles"></ion-icon>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="h1 logo">
+                <a href="#">Yuva<span>.</span></a>
+            </p>
+
+            <p class="copyright">&copy; 2025 <a href="https://codepen.io/leonam-silva-de-souza" target="_blank">ULTRA
+                    CODE</a>. All rights reserved</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="go-top " data-go-top title="Go to Top">
+        <ion-icon name="arrow-up"></ion-icon>
+    </a>
+
+    <script src="portfolio.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
