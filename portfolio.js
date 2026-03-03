@@ -67,22 +67,63 @@ themeToggleBtn.addEventListener("click", function () {
     localStorage.setItem("theme", "dark-theme");
   }
 });
+// Profile Image Toggle based on Theme
+    const themeBtn = document.querySelector('[data-theme-btn]');
+const picture = document.getElementById('profilePic');
+const img = picture.querySelector('img');
+const sources = picture.querySelectorAll('source');
 
-//Applying Theme kept in Local Storage
+// Get theme from localStorage
+let isDark = localStorage.getItem('theme') === 'dark';
 
-if (localStorage.getItem("theme") === "light-theme") {
-  themeToggleBtn.classList.add("active");
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-} else {
-  themeToggleBtn.classList.remove("active");
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
+// Apply theme on page load
+applyTheme(isDark);
+
+themeBtn.addEventListener('click', () => {
+    // ✅ Proper toggle
+    isDark = !isDark;
+
+    // Save theme
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    applyTheme(isDark);
+});
+
+function applyTheme(isDark) {
+    // Reset body classes
+    document.body.classList.remove('dark-theme', 'light-theme');
+
+    // Apply correct theme
+    if (isDark) {
+        document.body.classList.add('dark-theme');
+        themeBtn.classList.remove('active');
+    } else {
+        document.body.classList.add('light-theme');
+        themeBtn.classList.add('active');
+    }
+
+    // Select image based on theme
+    const baseImage = isDark
+        ? 'image/pro-yuva.png'
+        : 'image/pro-yuva-lite.png';
+
+    const newImage = `${baseImage}?v=${Date.now()}`; // prevent caching
+
+    // Update <source>
+    sources.forEach(source => {
+        source.srcset = newImage;
+    });
+
+    // Update <img>
+    img.src = newImage;
+    img.srcset = newImage;
 }
+
 
 // download CV section
 
-const pdfUrl = "https://raw.githubusercontent.com/Yuvaraj-Selvarasu/my-cv/main/My_CV.pdf";
+const pdfUrl =
+  "https://raw.githubusercontent.com/Yuvaraj-Selvarasu/my-cv/main/My_CV.pdf";
 
 function downloadPDF(button) {
   // Add animation class
@@ -99,3 +140,14 @@ function downloadPDF(button) {
   // Reset animation after 3s
   setTimeout(() => button.classList.remove("active"), 5000);
 }
+
+document.querySelectorAll(".navbar-list li").forEach((item) => {
+  item.addEventListener("click", () => {
+    const navBarSec = document.querySelector(".navbar");
+    navBarSec.classList.remove("active");
+
+    // also remove toggle button active state if needed
+    const navToggleBtn = document.querySelector(".nav-toggle-btn");
+    navToggleBtn.classList.remove("active");
+  });
+});
