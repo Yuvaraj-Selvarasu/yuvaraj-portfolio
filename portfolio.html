@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuva - Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -49,7 +49,7 @@
         <article class="container">
             <section class="hero" id="home">
                 <figure class="hero-banner">
-                    <picture>
+                    <picture id="profilePic">
                         <source srcset="image/pro-yuva.png" media="(min-width: 768px)">
                         <source srcset="image/pro-yuva.png" media="(min-width: 500px)">
                         <img src="image/pro-yuva.png" alt="A man with blue shirt" class="w-100">
@@ -139,7 +139,7 @@
 
             <section class="about" id="about">
                 <figure class="about-banner">
-                    <img src="image/yuva-about.png" alt="A man thinking" class="w-100">
+                    <img src="image/yuva-about-dark.png" alt="A man thinking" class="w-100">
                 </figure>
 
                 <div class="about-content section-content">
@@ -454,6 +454,32 @@
                     </p>
                 </div>
                 <ul class="timeline">
+                     <!-- Item 1 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">10th</span>
+                                <span class="time-wrapper"><span class="time">Secondary School Leaving Certificate</span></span>
+                            </div>
+                            <div class="desc">Government Higher Secondary School,
+                                State Education Board —Theyyar
+                                2014-2015</div>
+                        </div>
+                    </li>
+                     <!-- Item 1 -->
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">12th</span>
+                                <span class="time-wrapper"><span class="time">Higher Secondary Certificate</span></span>
+                            </div>
+                            <div class="desc">Government Higher Secondary School,
+                                State Education Board —Theyyar
+                                2016-2017</div>
+                        </div>
+                    </li>
                     <!-- Item 1 -->
                     <li>
                         <div class="direction-r">
@@ -647,7 +673,7 @@
         <ion-icon name="arrow-up"></ion-icon>
     </a>
 
-    <script src="portfolio.js"></script>
+    <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
